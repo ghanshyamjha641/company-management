@@ -6,4 +6,8 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("hello this is demo data!")
 
+#Signup page.
+def admin_signup(request):
+    return render(request,"signup.html")
+
 
