@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Signup</title>
+    <title>Admin Login</title>
     <style>
         * {
             margin: 0;
@@ -98,40 +98,25 @@
 
     <div class="container">
         <div class="signup-form">
-            <h2>User Signup</h2>
+            <h2>User Login</h2>
             {% if error %}
             <div style="color: red; margin-bottom: 15px;">{{ error }}</div>
             {% endif %}
-            <form method="POST" action="{% url 'signup' %}">{% csrf_token %}
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="fullname" placeholder="Enter your fullname" required>
-                </div>
+            <form method="POST" action="{% url 'login' %}">{% csrf_token %}
+    
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Address">
-                </div>
-                    <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                </div>
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="confirmpassword" placeholder="Confirm Password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
                 </div>
-               
-                <button type="submit" class="btn">Sign Up</button>
+            
+                <button type="submit" class="btn">Login</button>
             </form>
+
         </div>
     </div>
 
